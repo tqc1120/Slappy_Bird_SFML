@@ -1,6 +1,7 @@
 #include <sstream>
 #include "MainMenuState.h"
 #include "DEFINITIONS.h"
+#include "GameState.h"
 
 #include <iostream>
 
@@ -38,7 +39,7 @@ namespace Tinkay
 
 			if (this->_data->input.IsSpriteClicked(this->_playButton, sf::Mouse::Left, this->_data->window))
 			{
-				std::cout << "Go To Game Screen" << std::endl;
+				_data->machine.AddState(StateRef(new GameState(_data)), true);
 			}
 		}
 	}
