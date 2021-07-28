@@ -1,26 +1,26 @@
 #pragma once
 
 #include <sstream>
-#include "GameState.h"
+#include "GameOverState.h"
 #include "DEFINITIONS.h"
 
 #include <iostream>
 
 namespace Tinkay
 {
-	GameState::GameState(GameDataRef data) : _data(data)
+	GameOverState::GameOverState(GameDataRef data) : _data(data)
 	{
 
 	}
 
-	void GameState::Init()
+	void GameOverState::Init()
 	{
-		this->_data->assets.LoadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
+		this->_data->assets.LoadTexture("Game Over Background", GAME_OVER_BACKGROUND_FILEPATH);
 
-		_background.setTexture(this->_data->assets.GetTexture("Game Background"));
+		_background.setTexture(this->_data->assets.GetTexture("Game OverBackground"));
 	}
 
-	void GameState::HandleInput()
+	void GameOverState::HandleInput()
 	{
 		sf::Event event;
 
@@ -33,12 +33,12 @@ namespace Tinkay
 		}
 	}
 
-	void GameState::Update(float dt)
+	void GameOverState::Update(float dt)
 	{
-	
+
 	}
 
-	void GameState::Draw(float dt)
+	void GameOverState::Draw(float dt)
 	{
 		this->_data->window.clear();
 
