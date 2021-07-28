@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "State.h"
 #include "Game.h"
+#include "Pipe.h"
 
 namespace Tinkay
 {
@@ -21,6 +22,8 @@ namespace Tinkay
 		GameDataRef _data;
 
 		sf::Sprite _background;
+
+		Pipe *pipe;
 
 	};
 }
