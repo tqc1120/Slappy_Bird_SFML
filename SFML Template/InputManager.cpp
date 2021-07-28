@@ -17,7 +17,7 @@ namespace Tinkay
 		return false;
 	}
 
-	sf::Vector2i InputManager::GetMousePosition(sf::RenderWindow& window)
+	sf::Vector2i InputManager::GetMousePosition(sf::RenderWindow &window)
 	{
 		return sf::Mouse::getPosition(window);
 	}

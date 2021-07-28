@@ -12,7 +12,7 @@ namespace Tinkay
 		}
 	}
 
-	sf::Texture& AssetManager::GetTexture( std::string name )
+	sf::Texture &AssetManager::GetTexture( std::string name )
 	{
 		return this->_textures.at( name );
 	}
@@ -27,7 +27,7 @@ namespace Tinkay
 		}
 	}
 
-	sf::Font& AssetManager::GetFont(std::string name)
+	sf::Font &AssetManager::GetFont(std::string name)
 	{
 		return this->_fonts.at( name );
 	}

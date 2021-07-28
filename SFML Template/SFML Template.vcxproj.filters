@@ -13,14 +13,17 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Resource Files\audio">
-      <UniqueIdentifier>{1e3fc216-b877-4ddd-b12c-26f0db6ca5aa}</UniqueIdentifier>
+    <Filter Include="Resource Files\Resources">
+      <UniqueIdentifier>{52f55b64-cc14-4ba0-aa4d-179ea3af9899}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\res">
+    <Filter Include="Resource Files\Resources\res">
       <UniqueIdentifier>{b28b2f23-d29b-4f2c-baca-9133b872272d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\fonts">
+    <Filter Include="Resource Files\Resources\fonts">
       <UniqueIdentifier>{3337151a-a11f-46a9-99ed-a5f6061e8697}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Resources\audio">
+      <UniqueIdentifier>{1e3fc216-b877-4ddd-b12c-26f0db6ca5aa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,6 +40,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,83 +62,89 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DEFINITIONS.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Media Include="..\..\..\Resources\audio\Code_STATE CREATION_7 - Splash State_Resources_audio_Hit.wav">
-      <Filter>Resource Files\audio</Filter>
+      <Filter>Resource Files\Resources\audio</Filter>
     </Media>
     <Media Include="..\..\..\Resources\audio\Code_STATE CREATION_7 - Splash State_Resources_audio_Point.wav">
-      <Filter>Resource Files\audio</Filter>
+      <Filter>Resource Files\Resources\audio</Filter>
     </Media>
     <Media Include="..\..\..\Resources\audio\Code_STATE CREATION_7 - Splash State_Resources_audio_Wing.wav">
-      <Filter>Resource Files\audio</Filter>
+      <Filter>Resource Files\Resources\audio</Filter>
     </Media>
   </ItemGroup>
   <ItemGroup>
     <Font Include="..\..\..\Resources\fonts\arial.ttf">
-      <Filter>Resource Files\fonts</Filter>
+      <Filter>Resource Files\Resources\fonts</Filter>
     </Font>
     <Font Include="..\..\..\Resources\fonts\FlappyFont.ttf">
-      <Filter>Resource Files\fonts</Filter>
+      <Filter>Resource Files\Resources\fonts</Filter>
     </Font>
     <Font Include="..\..\..\Resources\fonts\Marker Felt.ttf">
-      <Filter>Resource Files\fonts</Filter>
+      <Filter>Resource Files\Resources\fonts</Filter>
     </Font>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Resources\res\bird-01.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\bird-02.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\bird-03.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\bird-04.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\Bronze-Medal.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\Game-Over-Body.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\Game-Over-Title.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\Gold-Medal.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\InvisibleScoringPipe.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\land.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\PipeDown.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\PipeUp.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\Platinum-Medal.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\PlayButton.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\Silver-Medal.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\sky.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\Splash Background.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
     <Image Include="..\..\..\Resources\res\title.png">
-      <Filter>Resource Files\res</Filter>
+      <Filter>Resource Files\Resources\res</Filter>
     </Image>
   </ItemGroup>
 </Project>

@@ -20,7 +20,7 @@ namespace Tinkay
 
 		void ProcessStateChanges( );
 
-		StateRef& GetActiveState( );
+		StateRef &GetActiveState( );
 
 	private:
 		std::stack<StateRef> _states;

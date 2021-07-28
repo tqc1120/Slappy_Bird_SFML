@@ -1,9 +1,10 @@
-#include <SFML/Graphics.hpp>
 #include "Game.h"
+#include "DEFINITIONS.h"
+#include <iostream>
 
 int main()
 {
-	Tinkay::Game(800, 800, "SFML GAME Starter");
+	Tinkay::Game(SCREEN_WIDTH, SCREEN_HEIGHT, "Flappy Bird");
 
 	return EXIT_SUCCESS;
 }
