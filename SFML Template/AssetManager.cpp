@@ -1,3 +1,4 @@
+#include <SFML/Graphics.hpp>
 #include "AssetManager.h"
 
 namespace Tinkay
