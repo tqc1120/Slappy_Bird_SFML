@@ -4,6 +4,7 @@
 #include "State.h"
 #include "Game.h"
 #include "Pipe.h"
+#include "Land.h"
 
 namespace Tinkay
 {
@@ -24,6 +25,7 @@ namespace Tinkay
 		sf::Sprite _background;
 
 		Pipe *pipe;
+		Land *land;
 
 		sf::Clock clock;
 
