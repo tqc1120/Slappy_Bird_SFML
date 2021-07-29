@@ -37,9 +37,7 @@ namespace Tinkay
 
 			if (this->_data->input.IsSpriteClicked(this->_background, sf::Mouse::Left, this->_data->window))
 			{
-				pipe->SpawnInvisiblePipe();
-				pipe->SpawnBottomPipe();
-				pipe->SpawnTopPipe();
+				
 			}
 		}
 	}
@@ -47,6 +45,15 @@ namespace Tinkay
 	void GameState::Update(float dt)
 	{
 		pipe->MovePipes(dt);
+
+		if (clock.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY)
+		{
+			pipe->SpawnInvisiblePipe();
+			pipe->SpawnBottomPipe();
+			pipe->SpawnTopPipe();
+
+			clock.restart();
+		}
 	}
 
 	void GameState::Draw(float dt)

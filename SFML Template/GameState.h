@@ -25,5 +25,7 @@ namespace Tinkay
 
 		Pipe *pipe;
 
+		sf::Clock clock;
+
 	};
 }
