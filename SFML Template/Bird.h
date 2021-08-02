@@ -33,5 +33,7 @@ namespace Tinkay
 
 		int _birdState;
 
+		float _rotation;
+
 	};
 }
