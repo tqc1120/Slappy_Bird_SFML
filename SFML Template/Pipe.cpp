@@ -5,6 +5,8 @@ namespace Tinkay
 {
 	Pipe::Pipe(GameDataRef data) : _data(data)
 	{
+		_landHeight = _data->assets.GetTexture("Land").getSize().y;
+		_pipeSpawnYOffset = 0;
 
 	}
 
@@ -12,7 +14,7 @@ namespace Tinkay
 	{
 		sf::Sprite sprite(this->_data->assets.GetTexture("Pipe Up"));
 
-		sprite.setPosition(this->_data->window.getSize().x, this->_data->window.getSize().y - sprite.getLocalBounds().height);
+		sprite.setPosition(this->_data->window.getSize().x, this->_data->window.getSize().y - sprite.getLocalBounds().height - _pipeSpawnYOffset);
 
 		pipeSprites.push_back(sprite);
 	}
@@ -21,7 +23,7 @@ namespace Tinkay
 	{
 		sf::Sprite sprite(this->_data->assets.GetTexture("Pipe Down"));
 
-		sprite.setPosition(this->_data->window.getSize().x, 0);
+		sprite.setPosition(this->_data->window.getSize().x, -_pipeSpawnYOffset);
 
 		pipeSprites.push_back(sprite);
 	}
@@ -62,5 +64,10 @@ namespace Tinkay
 		{
 			this->_data->window.draw(pipeSprites.at(i));
 		}
+	}
+
+	void Pipe::RandomisePipeOffset()
+	{
+		_pipeSpawnYOffset = rand() % (_landHeight + 1);
 	}
 }
