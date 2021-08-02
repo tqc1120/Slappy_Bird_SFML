@@ -19,9 +19,11 @@ namespace Tinkay
 		this->_data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
 		this->_data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
 		this->_data->assets.LoadTexture("Land", LAND_FILEPATH);
+		this->_data->assets.LoadTexture("Bird Frame 1", BIRD_FRAME_1_FILEPATH);
 
 		pipe = new Pipe(_data);
 		land = new Land(_data);
+		bird = new Bird(_data);
 
 		_background.setTexture(this->_data->assets.GetTexture("Game Background"));
 	}
@@ -68,6 +70,7 @@ namespace Tinkay
 
 		pipe->DrawPipes();
 		land->DrawLand();
+		bird->Draw();
 		this->_data->window.display();
 	}
 }

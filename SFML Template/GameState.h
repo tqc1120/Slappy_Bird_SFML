@@ -5,6 +5,7 @@
 #include "Game.h"
 #include "Pipe.h"
 #include "Land.h"
+#include "Bird.h"
 
 namespace Tinkay
 {
@@ -26,6 +27,7 @@ namespace Tinkay
 
 		Pipe *pipe;
 		Land *land;
+		Bird *bird;
 
 		sf::Clock clock;
 
