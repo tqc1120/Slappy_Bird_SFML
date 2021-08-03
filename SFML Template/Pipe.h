@@ -19,9 +19,12 @@ namespace Tinkay
 		void DrawPipes();
 		void RandomisePipeOffset();
 
+		const std::vector<sf::Sprite>& GetSprites() const;
+
 	private:
 		GameDataRef _data;
 		std::vector<sf::Sprite> pipeSprites;
+		std::vector<sf::Sprite> pipesToDelete;
 
 		int _landHeight;
 		int _pipeSpawnYOffset;

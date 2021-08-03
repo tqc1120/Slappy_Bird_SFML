@@ -6,6 +6,7 @@
 #include "Pipe.h"
 #include "Land.h"
 #include "Bird.h"
+#include "Collision.h"
 
 namespace Tinkay
 {
@@ -28,8 +29,14 @@ namespace Tinkay
 		Pipe *pipe;
 		Land *land;
 		Bird *bird;
+		Collision collision;
 
 		sf::Clock clock;
+
+		int _gameState;
+
+		sf::RectangleShape _gameOverFlash;
+		bool _flashOn;
 
 	};
 }

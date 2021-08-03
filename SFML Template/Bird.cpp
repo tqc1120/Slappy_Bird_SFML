@@ -12,6 +12,7 @@ namespace Tinkay
 		_animationFrames.push_back(this->_data->assets.GetTexture("Bird Frame 4"));
 
 		_birdSprite.setTexture(_animationFrames.at(_animationIterator));
+
 		_birdSprite.setPosition((_data->window.getSize().x / 4) - (_birdSprite.getGlobalBounds().width / 2), (_data->window.getSize().y / 2) - (_birdSprite.getGlobalBounds().height / 2));
 
 		_birdState = BIRD_STATE_STILL;
@@ -91,5 +92,10 @@ namespace Tinkay
 	{
 		_movementClock.restart();
 		_birdState = BIRD_STATE_FLYING;
+	}
+
+	const sf::Sprite& Bird::GetSprite() const
+	{
+		return _birdSprite;
 	}
 }
