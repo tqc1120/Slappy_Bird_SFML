@@ -8,6 +8,7 @@
 #include "Bird.h"
 #include "Collision.h"
 #include "Flash.h"
+#include "HUD.h"
 
 namespace Tinkay
 {
@@ -32,9 +33,12 @@ namespace Tinkay
 		Bird *bird;
 		Collision collision;
 		Flash* flash;
+		HUD* hud;
 
 		sf::Clock clock;
 
 		int _gameState;
+
+		int _score;
 	};
 }

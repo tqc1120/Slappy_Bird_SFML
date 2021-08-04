@@ -32,10 +32,19 @@ namespace Tinkay
 	{
 		sf::Sprite sprite(this->_data->assets.GetTexture("Pipe Down"));
 
-		sprite.setPosition(this->_data->window.getSize().x, 0);
+		sprite.setPosition(this->_data->window.getSize().x, -_pipeSpawnYOffset);
 		sprite.setColor(sf::Color(0, 0, 0, 0));
 
 		pipeSprites.push_back(sprite);
+	}
+
+	void Pipe::SpawnScoringPipe()
+	{
+		sf::Sprite sprite(this->_data->assets.GetTexture("Scoring Pipe"));
+
+		sprite.setPosition(this->_data->window.getSize().x, 0);
+
+		scoringPipes.push_back(sprite);
 	}
 
 	void Pipe::MovePipes(float dt)
@@ -54,7 +63,20 @@ namespace Tinkay
 			}
 		}
 
-		std::cout << pipeSprites.size() << std::endl;
+		for (unsigned short int i = 0; i < scoringPipes.size(); i++)
+		{
+			if (scoringPipes.at(i).getPosition().x < 0 - scoringPipes.at(i).getLocalBounds().width)
+			{
+				scoringPipes.erase(scoringPipes.begin() + i);
+			}
+			else
+			{
+				float movement = PIPE_MOVEMENT_SPEED * dt;
+
+				scoringPipes.at(i).move(-movement, 0);
+			}
+		}
+
 	}
 
 
@@ -74,5 +96,10 @@ namespace Tinkay
 	const std::vector<sf::Sprite>& Pipe::GetSprites() const
 	{
 		return pipeSprites;
+	}
+
+	std::vector<sf::Sprite>& Pipe::GetScoringSprites()
+	{
+		return scoringPipes;
 	}
 }
