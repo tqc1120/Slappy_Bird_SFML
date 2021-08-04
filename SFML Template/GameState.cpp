@@ -3,6 +3,7 @@
 #include <sstream>
 #include "GameState.h"
 #include "DEFINITIONS.h"
+#include "GameOverState.h"
 
 #include <iostream>
 
@@ -95,6 +96,8 @@ namespace Tinkay
 				if (collision.CheckSpriteCollision(bird->GetSprite(), 0.7f, landSprites.at(i), 1.0f))
 				{
 					_gameState = GameStates::eGameOver;
+
+					clock.restart();
 				}
 			}
 
@@ -105,6 +108,8 @@ namespace Tinkay
 				if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, pipeSprites.at(i), 1.0f))
 				{
 					_gameState = GameStates::eGameOver;
+
+					clock.restart();
 				}
 			}
 
@@ -129,7 +134,14 @@ namespace Tinkay
 		if (GameStates::eGameOver == _gameState)
 		{
 			flash->Show(dt);
+
+			if (clock.getElapsedTime().asSeconds() > TIME_BEFORE_GAME_OVER_APPEARS)
+			{
+				this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+			}
 		}
+
+
 	}
 
 	void GameState::Draw(float dt)

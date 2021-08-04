@@ -29,6 +29,9 @@
 
 #define FLAPPY_FONT_FILEPATH "Resources/fonts/FlappyFont.ttf"
 
+#define GAME_OVER_TITLE_FILEPATH "Resources/res/Game-Over-Title.png"
+#define GAME_OVER_BODY_FILEPATH "Resources/res/Game-Over-Body.png"
+
 #define BIRD_ANIMATION_DURATION 0.4f
 
 #define BIRD_STATE_STILL 1
@@ -50,3 +53,5 @@ enum GameStates
 };
 
 #define FLASH_SPEED 1500.0f
+
+#define TIME_BEFORE_GAME_OVER_APPEARS 1.5f
