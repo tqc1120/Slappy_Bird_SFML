@@ -6,16 +6,40 @@
 #include "GameState.h"
 
 #include <iostream>
+#include <fstream>
 
 namespace Tinkay
 {
-	GameOverState::GameOverState(GameDataRef data) : _data(data)
+	GameOverState::GameOverState(GameDataRef data, int score) : _data(data), _score(score)
 	{
 
 	}
 
 	void GameOverState::Init()
 	{
+		std::ifstream readFile;
+		readFile.open("Resources/Highscore.txt");
+		if (readFile.is_open())
+		{
+			while (!readFile.eof())
+			{
+				readFile >> _highScore;
+			}
+		}
+
+		readFile.close();
+		std::ofstream writeFile("Resources/Highscore.txt");
+
+		if (writeFile.is_open())
+		{
+			if (_score > _highScore)
+			{
+				_highScore = _score;
+			}
+
+			writeFile << _highScore;
+		}
+
 		this->_data->assets.LoadTexture("Game Over Background", GAME_OVER_BACKGROUND_FILEPATH);
 		this->_data->assets.LoadTexture("Game Over Title", GAME_OVER_TITLE_FILEPATH);
 		this->_data->assets.LoadTexture("Game Over Body", GAME_OVER_BODY_FILEPATH);
@@ -28,6 +52,20 @@ namespace Tinkay
 		_gameOverContainer.setPosition(sf::Vector2f((_data->window.getSize().x / 2) - (_gameOverContainer.getGlobalBounds().width / 2), (_data->window.getSize().y / 2) - (_gameOverContainer.getGlobalBounds().height / 2)));
 		_gameOverTitle.setPosition(sf::Vector2f((_data->window.getSize().x / 2) - (_gameOverTitle.getGlobalBounds().width / 2), _gameOverContainer.getPosition().y - (_gameOverTitle.getGlobalBounds().height * 1.2)));
 		_retryButton.setPosition(sf::Vector2f((_data->window.getSize().x / 2) - (_retryButton.getGlobalBounds().width / 2), _gameOverContainer.getPosition().y + _gameOverContainer.getGlobalBounds().height + (_retryButton.getGlobalBounds().height * 0.2)));
+		
+		_scoreText.setFont(this->_data->assets.GetFont("Flappy Font"));
+		_scoreText.setString(std::to_string(_score));
+		_scoreText.setCharacterSize(56);
+		_scoreText.setFillColor(sf::Color::White);
+		_scoreText.setOrigin(sf::Vector2f(_scoreText.getGlobalBounds().width / 2, _scoreText.getGlobalBounds().height / 2));
+		_scoreText.setPosition(sf::Vector2f(_data->window.getSize().x / 10 * 7.25, _data->window.getSize().y / 2.15));
+
+		_highScoreText.setFont(this->_data->assets.GetFont("Flappy Font"));
+		_highScoreText.setString(std::to_string(_highScore));
+		_highScoreText.setCharacterSize(56);
+		_highScoreText.setFillColor(sf::Color::White);
+		_highScoreText.setOrigin(sf::Vector2f(_highScoreText.getGlobalBounds().width / 2, _highScoreText.getGlobalBounds().height / 2));
+		_highScoreText.setPosition(sf::Vector2f(_data->window.getSize().x / 10 * 7.25, _data->window.getSize().y / 1.78));
 	}
 
 	void GameOverState::HandleInput()
@@ -62,6 +100,8 @@ namespace Tinkay
 		this->_data->window.draw(_gameOverTitle);
 		this->_data->window.draw(_gameOverContainer);
 		this->_data->window.draw(_retryButton);
+		this->_data->window.draw(_scoreText);
+		this->_data->window.draw(_highScoreText);
 
 		this->_data->window.display();
 	}

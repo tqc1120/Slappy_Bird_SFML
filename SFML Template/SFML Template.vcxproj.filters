@@ -66,10 +66,10 @@
     <ClCompile Include="Collision.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Flash.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="HUD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Flash.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -200,5 +200,10 @@
     <Image Include="..\..\..\Resources\res\title.png">
       <Filter>Resource Files\Resources\res</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Highscore.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
