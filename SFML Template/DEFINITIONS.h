@@ -32,6 +32,12 @@
 #define GAME_OVER_TITLE_FILEPATH "Resources/res/Game-Over-Title.png"
 #define GAME_OVER_BODY_FILEPATH "Resources/res/Game-Over-Body.png"
 
+#define BRONZE_MEDAL_FILEPATH "Resources/res/Bronze-Medal.png"
+#define SILVER_MEDAL_FILEPATH "Resources/res/Silver-Medal.png"
+#define GOLD_MEDAL_FILEPATH "Resources/res/Gold-Medal.png"
+#define PLATINUM_MEDAL_FILEPATH "Resources/res/Platinum-Medal.png"
+
+
 #define BIRD_ANIMATION_DURATION 0.4f
 
 #define BIRD_STATE_STILL 1
@@ -55,3 +61,8 @@ enum GameStates
 #define FLASH_SPEED 1500.0f
 
 #define TIME_BEFORE_GAME_OVER_APPEARS 1.5f
+
+#define BRONZE_MEDAL_SCORE 0
+#define SILVER_MEDAL_SCORE 5
+#define GOLD_MEDAL_SCORE 25
+#define PLATINUM_MEDAL_SCORE 100
