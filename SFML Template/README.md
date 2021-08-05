@@ -1,1 +1,1 @@
-<div style="width:260px;max-width:100%;"><div style="height:0;padding-bottom:53.85%;position:relative;"><iframe width="260" height="140" style="
+![Recording of the Game Scene](Resources/res/Flappy%20Bird.gif)
