@@ -17,6 +17,7 @@ namespace Tinkay
 
 	void GameOverState::Init()
 	{
+		 
 		std::ifstream readFile;
 		readFile.open("Resources/Highscore.txt");
 		if (readFile.is_open())

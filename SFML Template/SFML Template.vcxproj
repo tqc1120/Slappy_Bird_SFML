@@ -180,9 +180,9 @@
     <ClInclude Include="StateMachine.h" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="..\..\..\Resources\audio\Code_STATE CREATION_7 - Splash State_Resources_audio_Hit.wav" />
-    <Media Include="..\..\..\Resources\audio\Code_STATE CREATION_7 - Splash State_Resources_audio_Point.wav" />
-    <Media Include="..\..\..\Resources\audio\Code_STATE CREATION_7 - Splash State_Resources_audio_Wing.wav" />
+    <Media Include="..\..\..\resources\audio\Hit.wav" />
+    <Media Include="..\..\..\Resources\audio\Point.wav" />
+    <Media Include="..\..\..\Resources\audio\Wing.wav" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="..\..\..\Resources\fonts\arial.ttf" />

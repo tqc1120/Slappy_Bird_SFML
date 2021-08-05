@@ -37,6 +37,9 @@
 #define GOLD_MEDAL_FILEPATH "Resources/res/Gold-Medal.png"
 #define PLATINUM_MEDAL_FILEPATH "Resources/res/Platinum-Medal.png"
 
+#define HIT_SOUND_FILEPATH "Resources/audio/Hit.wav"
+#define POINT_SOUND_FILEPATH "Resources/audio/Point.wav"
+#define WING_SOUND_FILEPATH "Resources/audio/Wing.wav"
 
 #define BIRD_ANIMATION_DURATION 0.4f
 
