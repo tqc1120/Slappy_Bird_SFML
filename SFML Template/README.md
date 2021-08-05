@@ -1,1 +1,1 @@
-![caption](Resources/res/Flappy Bird.gif)
+![caption](Flappy Bird.gif)
