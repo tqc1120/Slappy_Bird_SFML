@@ -200,10 +200,16 @@
     <Image Include="..\..\..\Resources\res\title.png">
       <Filter>Resource Files\Resources\res</Filter>
     </Image>
+    <Image Include="..\..\..\Flappy Bird.gif">
+      <Filter>Resource Files\Resources\res</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Highscore.txt">
       <Filter>Resource Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>
