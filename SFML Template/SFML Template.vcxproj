@@ -190,7 +190,6 @@
     <Font Include="..\..\..\Resources\fonts\Marker Felt.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\Flappy Bird.gif" />
     <Image Include="..\..\..\Resources\res\bird-01.png" />
     <Image Include="..\..\..\Resources\res\bird-02.png" />
     <Image Include="..\..\..\Resources\res\bird-03.png" />
